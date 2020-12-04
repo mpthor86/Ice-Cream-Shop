@@ -1,0 +1,17 @@
+<h1>Create a New Ice Cream</h1>
+
+<%if !@icecream.errors.full_messages.empty?%>
+  <%=@icecream.errors.full_messages.join(". ")%>
+<%end%>
+
+<form method="POST" action="/icecreams">
+  <label for="flavor">Flavor:</label>
+  <input id="flavor" type="text" name="icecream[flavor]" value="<%=@icecream.flavor%>"><br>
+  <label for="toppings">Toppings:</label>
+  <input id="toppings" type="text" name="icecream[toppings]"><br>
+  <label for="rating">Rating:</label>
+  <input id="rating" type="number" name="icecream[rating]"><br>
+
+  <input type="submit" id="create_icecream" value="Create Ice Cream">
+
+</form> 
