@@ -11,4 +11,9 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
+  get '/icecreams' do
+    @icecreams = IceCream.all
+    erb :"icecreams/index"
+  end
+
 end
